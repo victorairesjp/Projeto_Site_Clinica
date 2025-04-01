@@ -1,0 +1,122 @@
+/* Estilos gerais com a nova paleta */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Fundo branco agora no body */
+    color: #333;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Ajuste no wrapper para garantir que o footer vá para baixo */
+.wrapper {
+    display: flex;
+    margin: 0;
+    min-height: 100vh; /* Ocupa a altura da tela */
+    /* O flex direction column não é mais necessário aqui se o main cresce */
+}
+
+/* Ajuste no Menu para que a cor vá até o topo/base */
+.menu {
+    width: 220px;
+    background-color: #6b2c43;
+    padding: 25px 20px;
+    color: #ffffff;
+    /* Adicionado para garantir que o fundo se estenda se o conteúdo for pequeno */
+    display: flex;
+    flex-direction: column;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-bottom: 12px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Links do menu em branco */
+    display: block;
+    padding: 10px 15px; /* Padding nos links */
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Efeito suave na transição */
+}
+
+.menu ul li a:hover {
+    background-color: #cba1a6; /* Cor clara da paleta no hover */
+    color: #6b2c43; /* Texto escuro no hover para contraste */
+}
+
+/* Ajuste no main para permitir que o footer vá para baixo*/
+.main {
+    flex-grow: 1; /* Ocupa o espaço vertical disponível */
+    padding: 30px 40px;
+    background-color: #ffffff;
+    display: flex; /* Adicionado */
+    flex-direction: column; /* Adicionado */
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.header .imgheader {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Adicionar para que o content use o espaço e o footer fique em baixo */
+.content {
+    flex-grow: 1; /* Faz o conteúdo empurrar o footer para baixo */
+    line-height: 1.7;
+ }
+
+.content h1 {
+    color: #6b2c43; /* Cor principal nos títulos H1 */
+    border-bottom: 2px solid #cba1a6; /* Borda inferior com a cor clara */
+    padding-bottom: 8px;
+    margin-top: 35px;
+    font-size: 1.8em; /* Aumenta um pouco o tamanho do H1 */
+}
+
+.content h1:first-child {
+    margin-top: 0;
+}
+
+.content ul {
+    margin-left: 25px;
+    list-style-type: disc; /* Mantém o marcador padrão */
+    padding-left: 15px; /* Espaço à esquerda da lista */
+}
+
+.content p, .content li {
+    color: #444; /* Um cinza um pouco mais escuro para parágrafos e itens de lista */
+    margin-bottom: 15px; /* Espaçamento abaixo dos parágrafos */
+}
+
+/* Ajuste no Footer para que a cor vá até em baixo */
+.footer {
+    margin-top: auto; /* Empurra o footer para baixo se o conteúdo for curto */
+    padding: 20px;
+    background-color: #6b2c43;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 3px solid #cba1a6;
+}
+
+.footer p {
+    margin: 0; /* Remove margem padrão do parágrafo no footer */
+    color: #ffffff; /* Garante que o texto no P seja branco */
+}
